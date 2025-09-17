@@ -1,32 +1,52 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>🎁 Магазин кейсов</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>🎁 Магазин кейсов</h1>
-  </header>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-  <main>
-    <div class="cases">
-      <a href="case.html?case=1" class="case-card">
-        <img src="images/case1.png" alt="Кейс 1">
-        <p>Кейс 1</p>
-      </a>
-      <a href="case.html?case=2" class="case-card">
-        <img src="images/case2.png" alt="Кейс 2">
-        <p>Кейс 2</p>
-      </a>
-      <a href="case.html?case=3" class="case-card">
-        <img src="images/case3.png" alt="Кейс 3">
-        <p>Кейс 3</p>
-      </a>
-    </div>
+header {
+  background: #0f3460;
+  padding: 20px;
+}
 
-    <a href="profile.html" class="profile-btn">👤 Профиль</a>
-  </main>
-</body>
-</html>
+h1 {
+  margin: 0;
+}
+
+.cases {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px;
+}
+
+.case-card {
+  background: #1a1a2e;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s;
+  width: 120px;
+}
+
+.case-card:hover {
+  transform: scale(1.1);
+}
+
+.case-card img {
+  max-width: 100px;
+}
+
+.profile-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #e94560;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
