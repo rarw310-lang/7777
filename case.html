@@ -2,22 +2,58 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Профиль</title>
+  <title>Открытие кейсов</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>👤 Профиль</h1>
-    <nav>
-      <a href="index.html">🏠 Главная</a>
-      <a href="case.html">🎁 Кейсы</a>
-    </nav>
+    <h1>🎁 Открытие кейса</h1>
+    <a href="index.html">⬅ Назад</a>
   </header>
 
-  <main>
-    <h2>Мой аккаунт</h2>
-    <p>Баланс: <strong>1000 монет</strong></p>
-    <p>Открытые кейсы: 0</p>
+  <main class="case-opening">
+    <div class="roulette-container">
+      <div class="roulette" id="roulette">
+        <!-- Предметы в кейсе -->
+        <img src="images/item1.png" alt="Item">
+        <img src="images/item2.png" alt="Item">
+        <img src="images/item3.png" alt="Item">
+        <img src="images/item4.png" alt="Item">
+        <img src="images/item5.png" alt="Item">
+        <img src="images/item6.png" alt="Item">
+      </div>
+    </div>
+    <button id="openCaseBtn">🎉 Открыть кейс</button>
+    <h2 id="result"></h2>
   </main>
+
+  <script>
+    const roulette = document.getElementById("roulette");
+    const button = document.getElementById("openCaseBtn");
+    const result = document.getElementById("result");
+
+    button.addEventListener("click", () => {
+      result.textContent = "";
+      button.disabled = true;
+
+      // Случайный предмет
+      const items = document.querySelectorAll(".roulette img");
+      const randomIndex = Math.floor(Math.random() * items.length);
+
+      // Сдвиг анимации
+      const offset = -(randomIndex * 150 + 1500); // 150px = ширина предмета
+      roulette.style.transition = "transform 3s cubic-bezier(0.25, 1, 0.5, 1)";
+      roulette.style.transform = translateX(${offset}px);
+
+      setTimeout(() => {
+        result.textContent = 🎊 Ты выбил: ${items[randomIndex].alt};
+        button.disabled = false;
+
+        // Сброс анимации
+        roulette.style.transition = "none";
+        roulette.style.transform = "translateX(0)";
+      }, 3200);
+    });
+  </script>
 </body>
 </html>
