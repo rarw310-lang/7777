@@ -3,13 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>🎁 Магазин кейсов</title>
-  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🎁 Магазин кейсов</h1>
-  <nav>
-    <a href="/case">Кейсы</a>
-    <a href="/profile">👤 Профиль</a>
-  </nav>
+  <header>
+    <h1>🎁 Магазин кейсов</h1>
+  </header>
+
+  <main>
+    <div class="cases">
+      <a href="case.html?case=1" class="case-card">
+        <img src="images/case1.png" alt="Кейс 1">
+        <p>Кейс 1</p>
+      </a>
+      <a href="case.html?case=2" class="case-card">
+        <img src="images/case2.png" alt="Кейс 2">
+        <p>Кейс 2</p>
+      </a>
+      <a href="case.html?case=3" class="case-card">
+        <img src="images/case3.png" alt="Кейс 3">
+        <p>Кейс 3</p>
+      </a>
+    </div>
+
+    <a href="profile.html" class="profile-btn">👤 Профиль</a>
+  </main>
 </body>
 </html>
