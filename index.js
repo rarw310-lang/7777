@@ -14,7 +14,7 @@ const bot = new TelegramBot(token, { polling: true });
 bot.onText(/\/start/, (msg) => {
     bot.sendMessage(msg.chat.id, "👋 Добро пожаловать! Жми кнопку ниже:", {
         reply_markup: {
-            keyboard: [[{ text: "🎁 Открыть кейсы", web_app: { url: "https://x35lw5afri.onrender.com" } }]],
+            keyboard: [[{ text: "🎁 Открыть кейсы", web_app: { url: "https://seven777-0hev.onrender.com" } }]],
             resize_keyboard: true,
             one_time_keyboard: true
         }
